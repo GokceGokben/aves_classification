@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+
+# Environment / secrets
+.env
+.env.*
+*.key
+*.pem
+*.crt
+
+# Large artifacts / model checkpoints
+*.pth
+*.pt
+*.onnx
+*.ckpt
+*.bin
+results.png
+training_checkpoint.pth
+best_bird_model.pth
+final_bird_model.pth
+
+# Datasets and generated data
+data/
+!data/download_world_birds.py
+!data/world_birds.txt
+
+# Notebook outputs / misc
+.ipynb_checkpoints/
+*.log
+*.tmp
+tmp_*.jpg
+tmp_*.png
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/

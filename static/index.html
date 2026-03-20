@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aves Classification</title>
+    <link rel="icon" href="/static/bird.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="container glass-panel">
+        <header>
+            <h1>Aves (Bird) Identifier</h1>
+            <p>Upload a bird image to instantly classify its species using deep learning model.</p>
+            <div id="upload-rule-warning" class="upload-rule-warning">
+                <span style="font-size:1.1rem;">⚠️</span>
+                <span>Please upload <strong>one bird species at a time</strong> — multiple species in one photo may
+                    confuse the model.</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="upload-area" id="drop-zone">
+                <input type="file" id="file-input" accept="image/png, image/jpeg, image/jpg" hidden>
+                <div class="upload-icon">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                </div>
+                <h3>Drag & Drop your image here</h3>
+                <p>PNG / JPG • Max 10MB</p>
+                <button id="browse-btn" class="btn-primary">Browse Files</button>
+            </div>
+
+            <div class="preview-area hidden" id="preview-section">
+                <div class="image-wrapper">
+                    <img id="image-preview" src="" alt="Preview">
+                </div>
+                <div class="file-meta" id="file-meta">No image selected</div>
+                <button id="predict-btn" class="btn-success">Identify Bird</button>
+                <button id="reset-btn" class="btn-secondary">Try Another</button>
+            </div>
+
+            <div class="result-area hidden" id="result-section">
+                <div class="loader-container hidden" id="loader">
+                    <div class="spinner"></div>
+                    <p>Analyzing image...</p>
+                </div>
+
+                <div class="prediction-content hidden" id="prediction-data">
+                    <h2 class="species-name" id="species-name">Great Blue Heron</h2>
+
+                    <div class="confidence-wrapper">
+                        <div class="confidence-header">
+                            <span>Confidence</span>
+                            <span id="confidence-text">98.5%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" id="confidence-bar"></div>
+                        </div>
+                    </div>
+
+                    <p class="model-note">Note: model can make mistakes. Please verify critical results manually.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

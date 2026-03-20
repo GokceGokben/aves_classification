@@ -1,0 +1,10 @@
+pandas
+Pillow
+tqdm
+fastapi
+uvicorn
+python-multipart
+transformers
+torch
+requests
+accelerate
