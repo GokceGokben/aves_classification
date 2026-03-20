@@ -33,6 +33,7 @@ data/
 
 # Notebook outputs / misc
 .ipynb_checkpoints/
+notebooks/
 *.log
 *.tmp
 tmp_*.jpg
