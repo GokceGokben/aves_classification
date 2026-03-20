@@ -20,6 +20,27 @@ python app.py
 
 Then open `http://localhost:8000`.
 
+## Run Locally (Recommended for full prediction)
+
+Anyone can run this project on their own computer:
+
+```bash
+git clone https://github.com/GokceGokben/aves_classification.git
+cd aves_classification
+pip install -r requirements.txt
+python app.py
+```
+
+Open `http://localhost:8000` in your browser.
+
+## GitHub Pages Note
+
+The GitHub Pages site serves only static frontend files.
+
+- UI works on GitHub Pages
+- Real prediction requires the FastAPI backend (`/predict` endpoint)
+- For real predictions, run locally or deploy backend separately (Render/Railway/Fly, etc.)
+
 ## Training
 
 ```bash
